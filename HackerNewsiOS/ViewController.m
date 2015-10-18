@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import <Firebase/Firebase.h>
+
 @interface ViewController ()
 
 @end
@@ -17,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    Firebase *fireBase = [[Firebase alloc] initWithUrl:@"https://hacker-news.firebaseio.com"];
 }
 
 - (void)didReceiveMemoryWarning {
