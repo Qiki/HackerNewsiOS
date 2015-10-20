@@ -10,8 +10,9 @@
 #import "NewsWebViewController.h"
 
 #import <Firebase/Firebase.h>
+#import <SafariServices/SafariServices.h>
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate, SFSafariViewControllerDelegate>
 @property (nonatomic, copy) NSArray *HNStories;
 @property (nonatomic, assign) NSInteger HNStoresCount;
 
@@ -84,7 +85,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *url = self.HNStories[indexPath.row][@"url"];
-    [self performSegueWithIdentifier:@"PUSH_WEBVIEW" sender:url];
+    SFSafariViewController *vc = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:url] entersReaderIfAvailable:YES] ;
+    vc.delegate = self;
+    
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -92,6 +96,12 @@
         NewsWebViewController *vc = [segue destinationViewController];
         vc.webURL = sender;
     }
+}
+
+#pragma mark - SFSafariViewController delegate methods
+
+- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller {
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
