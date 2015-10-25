@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NewsTableviewCell.h"
 #import "NewsWebViewController.h"
 
 #import <Firebase/Firebase.h>
@@ -19,7 +20,6 @@
 @end
 
 @implementation ViewController
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -67,17 +67,17 @@
     }
 }
 
-
+#pragma mark - UITableview delegate and datasource methods
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.HNStories.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *storeCell = [tableView dequeueReusableCellWithIdentifier:@"storeCell"];
+    NewsTableviewCell *storeCell = [tableView dequeueReusableCellWithIdentifier:@"storeCell"];
     
     if (self.HNStories.count > 0) {
-        storeCell.textLabel.text = [NSString stringWithFormat:@"%@", self.HNStories[indexPath.row][@"title"]];
+        storeCell.newsTitleLabel.text = [NSString stringWithFormat:@"%@", self.HNStories[indexPath.row][@"title"]];
     }
     
     return storeCell;
@@ -89,13 +89,6 @@
     vc.delegate = self;
     
     [self presentViewController:vc animated:YES completion:nil];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"PUSH_WEBVIEW"]) {
-        NewsWebViewController *vc = [segue destinationViewController];
-        vc.webURL = sender;
-    }
 }
 
 #pragma mark - SFSafariViewController delegate methods

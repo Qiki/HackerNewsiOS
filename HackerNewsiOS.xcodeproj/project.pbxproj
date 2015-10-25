@@ -15,6 +15,7 @@
 		27671C6C1BD42FC700D4EEAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27671C6A1BD42FC700D4EEAF /* LaunchScreen.storyboard */; };
 		27671C771BD42FC700D4EEAF /* HackerNewsiOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27671C761BD42FC700D4EEAF /* HackerNewsiOSTests.m */; };
 		27671C821BD42FC700D4EEAF /* HackerNewsiOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27671C811BD42FC700D4EEAF /* HackerNewsiOSUITests.m */; };
+		27671C921BDC7F7F00D4EEAF /* NewsTableviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27671C911BDC7F7F00D4EEAF /* NewsTableviewCell.m */; settings = {ASSET_TAGS = (); }; };
 		28BD452B1BD45B1C00FEDE89 /* NewsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD452A1BD45B1C00FEDE89 /* NewsWebViewController.m */; settings = {ASSET_TAGS = (); }; };
 		98AFF8075E27281F8E1A8C35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F82EF3A5BCA6C4D9DDD660 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,8 @@
 		27671C7D1BD42FC700D4EEAF /* HackerNewsiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerNewsiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27671C811BD42FC700D4EEAF /* HackerNewsiOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HackerNewsiOSUITests.m; sourceTree = "<group>"; };
 		27671C831BD42FC800D4EEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27671C901BDC7F7F00D4EEAF /* NewsTableviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsTableviewCell.h; path = "Tableview cells/NewsTableviewCell.h"; sourceTree = "<group>"; };
+		27671C911BDC7F7F00D4EEAF /* NewsTableviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsTableviewCell.m; path = "Tableview cells/NewsTableviewCell.m"; sourceTree = "<group>"; };
 		28BD45291BD45B1C00FEDE89 /* NewsWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsWebViewController.h; sourceTree = "<group>"; };
 		28BD452A1BD45B1C00FEDE89 /* NewsWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsWebViewController.m; sourceTree = "<group>"; };
 		39F82EF3A5BCA6C4D9DDD660 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +122,7 @@
 		27671C5B1BD42FC700D4EEAF /* HackerNewsiOS */ = {
 			isa = PBXGroup;
 			children = (
+				27671C8F1BDC7F1300D4EEAF /* Tableview cells */,
 				27671C5F1BD42FC700D4EEAF /* AppDelegate.h */,
 				27671C601BD42FC700D4EEAF /* AppDelegate.m */,
 				27671C621BD42FC700D4EEAF /* ViewController.h */,
@@ -158,6 +162,15 @@
 				27671C831BD42FC800D4EEAF /* Info.plist */,
 			);
 			path = HackerNewsiOSUITests;
+			sourceTree = "<group>";
+		};
+		27671C8F1BDC7F1300D4EEAF /* Tableview cells */ = {
+			isa = PBXGroup;
+			children = (
+				27671C901BDC7F7F00D4EEAF /* NewsTableviewCell.h */,
+				27671C911BDC7F7F00D4EEAF /* NewsTableviewCell.m */,
+			);
+			name = "Tableview cells";
 			sourceTree = "<group>";
 		};
 		58EEAAA646A10828370DB8AC /* Pods */ = {
@@ -354,6 +367,7 @@
 				27671C641BD42FC700D4EEAF /* ViewController.m in Sources */,
 				27671C611BD42FC700D4EEAF /* AppDelegate.m in Sources */,
 				27671C5E1BD42FC700D4EEAF /* main.m in Sources */,
+				27671C921BDC7F7F00D4EEAF /* NewsTableviewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
