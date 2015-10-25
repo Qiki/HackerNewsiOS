@@ -102,7 +102,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *url = self.HNStories[indexPath.row][@"url"];
-    NewsWebViewController *vc = [[NewsWebViewController alloc] initWithURL:[NSURL URLWithString:url] entersReaderIfAvailable:YES] ;
+    NewsWebViewController *vc = [[NewsWebViewController alloc] initWithURL:[NSURL URLWithString:url] entersReaderIfAvailable:YES];
 
     [self.navigationController pushViewController:vc animated:YES];
 }
