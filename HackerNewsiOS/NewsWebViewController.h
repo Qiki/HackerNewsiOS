@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewsWebViewController : UIViewController
+#import <SafariServices/SafariServices.h>
 
-@property (nonatomic, weak) IBOutlet UIWebView *webView;
-@property (nonatomic, copy) NSString *webURL;
+@interface NewsWebViewController : SFSafariViewController
 
 @end
