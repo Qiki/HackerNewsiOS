@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Hacker News-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -29,16 +29,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btK-q0-KV7">
-                                                    <rect key="frame" x="8" y="0.0" width="584" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="577" height="43"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstItem="btK-q0-KV7" firstAttribute="leading" secondItem="b4I-IZ-BEF" secondAttribute="leading" constant="8" id="8Qp-fD-WAp"/>
+                                                <constraint firstItem="btK-q0-KV7" firstAttribute="leading" secondItem="b4I-IZ-BEF" secondAttribute="leading" constant="15" id="8Qp-fD-WAp"/>
                                                 <constraint firstAttribute="bottom" secondItem="btK-q0-KV7" secondAttribute="bottom" id="R5A-XL-tyl"/>
                                                 <constraint firstItem="btK-q0-KV7" firstAttribute="top" secondItem="b4I-IZ-BEF" secondAttribute="top" id="ZKb-Td-BRe"/>
                                                 <constraint firstAttribute="trailing" secondItem="btK-q0-KV7" secondAttribute="trailing" constant="8" id="uVS-S9-q5X"/>
@@ -65,7 +65,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GAm-YK-cCC" secondAttribute="bottom" id="xOp-YU-jXa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="CRj-pP-mah"/>
+                    <navigationItem key="navigationItem" title="Hacker News" id="CRj-pP-mah"/>
                     <connections>
                         <outlet property="tableView" destination="GAm-YK-cCC" id="B8v-mX-SoU"/>
                         <segue destination="GD0-vE-Cla" kind="show" identifier="PUSH_WEBVIEW" id="hh8-p8-JaN"/>
