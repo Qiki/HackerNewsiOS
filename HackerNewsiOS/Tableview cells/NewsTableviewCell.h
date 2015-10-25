@@ -11,5 +11,6 @@
 @interface NewsTableviewCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet UILabel *newsTitleLabel;
+@property (nonatomic, weak) IBOutlet UILabel *informationLabel;
 
 @end

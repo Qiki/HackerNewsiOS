@@ -76,25 +76,68 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NewsTableviewCell *storeCell = [tableView dequeueReusableCellWithIdentifier:@"storeCell"];
     
+    NSString *time;
+    NSString *author;
+    
     if (self.HNStories.count > 0) {
-        storeCell.newsTitleLabel.text = [NSString stringWithFormat:@"%@", self.HNStories[indexPath.row][@"title"]];
+        storeCell.newsTitleLabel.text = [NSString stringWithFormat:@"%@", self.HNStories[indexPath.row][@"title"] ? : @""];
     }
     
+    if (self.HNStories[indexPath.row][@"time"]) {
+        NSTimeInterval timeInterval = [self.HNStories[indexPath.row][@"time"] doubleValue];
+        NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+        NSTimeInterval currentTimeInterval = [[NSDate date] timeIntervalSinceDate:date
+                                              ];
+        time = [self convertReadableTime:currentTimeInterval];
+    }
+    
+    if ([self.HNStories[indexPath.row][@"by"] length] > 0) {
+        author = [NSString stringWithFormat:@"by %@", self.HNStories[indexPath.row][@"by"]];
+    }
+    
+    storeCell.informationLabel.text = [NSString stringWithFormat:@"%@ %@", author, time];
+
     return storeCell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *url = self.HNStories[indexPath.row][@"url"];
-    SFSafariViewController *vc = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:url] entersReaderIfAvailable:YES] ;
-    vc.delegate = self;
-    
-    [self presentViewController:vc animated:YES completion:nil];
+    NewsWebViewController *vc = [[NewsWebViewController alloc] initWithURL:[NSURL URLWithString:url] entersReaderIfAvailable:YES] ;
+
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
-#pragma mark - SFSafariViewController delegate methods
+#pragma mark - Methods
 
-- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller {
-    [controller dismissViewControllerAnimated:YES completion:nil];
+- (NSString *)convertReadableTime:(NSTimeInterval)timeInterval {
+    NSString *readableTime;
+    NSInteger time = (NSInteger)timeInterval;
+    NSInteger seconds = time % 60;
+    NSInteger minutes = (time / 60) % 60;
+    NSInteger hours = (time / 3600);
+    
+    if (hours > 0) {
+        if (hours > 24) {
+            if ((hours / 24) > 1) {
+                readableTime = [NSString stringWithFormat:@"%li days ago", (long)(hours / 24)];
+            } else {
+                readableTime = [NSString stringWithFormat:@"%li day ago", (long)(hours / 24)];
+            }
+        } else {
+            if (hours == 1) {
+                readableTime = [NSString stringWithFormat:@"%li hr ago", (long)hours];
+            } else {
+                readableTime = [NSString stringWithFormat:@"%li hrs ago", (long)hours];
+
+            }
+        }
+    } else if (minutes > 0) {
+        readableTime = [NSString stringWithFormat:@"%li mins ago", (long)minutes];
+    } else if (seconds > 0) {
+        readableTime = [NSString stringWithFormat:@"%li secs ago", (long)seconds];
+    }
+
+    return readableTime;
 }
 
 @end

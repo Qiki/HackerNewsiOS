@@ -8,7 +8,7 @@
 
 #import "NewsWebViewController.h"
 
-@interface NewsWebViewController () <UIWebViewDelegate>
+@interface NewsWebViewController () <SFSafariViewControllerDelegate>
 
 @end
 
@@ -17,19 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.webURL ? : @""]]];
-    self.webView.scalesPageToFit = YES;
+    self.delegate = self;
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - SFSafariViewController delegate methods
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller {
+    [controller.navigationController popToRootViewControllerAnimated:YES];
 }
-*/
+
+- (void)safariViewController:(SFSafariViewController *)controller didCompleteInitialLoad:(BOOL)didLoadSuccessfully {
+    NSLog(@"DONE!");
+}
 
 @end
