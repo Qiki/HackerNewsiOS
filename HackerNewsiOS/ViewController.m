@@ -104,7 +104,7 @@
     NSString *url = self.HNStories[indexPath.row][@"url"];
     NewsWebViewController *vc = [[NewsWebViewController alloc] initWithURL:[NSURL URLWithString:url] entersReaderIfAvailable:YES];
 
-    [self.navigationController pushViewController:vc animated:YES];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 #pragma mark - Methods

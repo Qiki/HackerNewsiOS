@@ -23,7 +23,7 @@
 #pragma mark - SFSafariViewController delegate methods
 
 - (void)safariViewControllerDidFinish:(SFSafariViewController *)controller {
-    [controller.navigationController popToRootViewControllerAnimated:YES];
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)safariViewController:(SFSafariViewController *)controller didCompleteInitialLoad:(BOOL)didLoadSuccessfully {
