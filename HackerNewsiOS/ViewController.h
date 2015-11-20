@@ -15,3 +15,9 @@
 
 @end
 
+@interface ViewController (Test)
+
+- (NSString *)convertReadableTime:(NSTimeInterval)timeInterval;
+
+@end
+

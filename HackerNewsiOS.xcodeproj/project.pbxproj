@@ -15,11 +15,12 @@
 		27671C6C1BD42FC700D4EEAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27671C6A1BD42FC700D4EEAF /* LaunchScreen.storyboard */; };
 		27671C771BD42FC700D4EEAF /* HackerNewsiOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27671C761BD42FC700D4EEAF /* HackerNewsiOSTests.m */; };
 		27671C821BD42FC700D4EEAF /* HackerNewsiOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27671C811BD42FC700D4EEAF /* HackerNewsiOSUITests.m */; };
-		27671C921BDC7F7F00D4EEAF /* NewsTableviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27671C911BDC7F7F00D4EEAF /* NewsTableviewCell.m */; settings = {ASSET_TAGS = (); }; };
-		27671C951BDD577400D4EEAF /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27671C941BDD577400D4EEAF /* ExploreViewController.m */; settings = {ASSET_TAGS = (); }; };
-		27671C991BDD5CF500D4EEAF /* ExploreCollectionviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27671C981BDD5CF500D4EEAF /* ExploreCollectionviewCell.m */; settings = {ASSET_TAGS = (); }; };
-		28BD452B1BD45B1C00FEDE89 /* NewsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD452A1BD45B1C00FEDE89 /* NewsWebViewController.m */; settings = {ASSET_TAGS = (); }; };
+		27671C921BDC7F7F00D4EEAF /* NewsTableviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27671C911BDC7F7F00D4EEAF /* NewsTableviewCell.m */; };
+		27671C951BDD577400D4EEAF /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27671C941BDD577400D4EEAF /* ExploreViewController.m */; };
+		27671C991BDD5CF500D4EEAF /* ExploreCollectionviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27671C981BDD5CF500D4EEAF /* ExploreCollectionviewCell.m */; };
+		28BD452B1BD45B1C00FEDE89 /* NewsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD452A1BD45B1C00FEDE89 /* NewsWebViewController.m */; };
 		98AFF8075E27281F8E1A8C35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F82EF3A5BCA6C4D9DDD660 /* libPods.a */; };
+		FDAF8C2F1BFFB00C0067F5C7 /* MainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAF8C2E1BFFB00C0067F5C7 /* MainViewControllerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		39F82EF3A5BCA6C4D9DDD660 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F95846CDFD57FDA7205AC33 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B3DE56C7DC4374199E505657 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		FDAF8C2E1BFFB00C0067F5C7 /* MainViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			children = (
 				27671C761BD42FC700D4EEAF /* HackerNewsiOSTests.m */,
 				27671C781BD42FC700D4EEAF /* Info.plist */,
+				FDAF8C2E1BFFB00C0067F5C7 /* MainViewControllerTests.m */,
 			);
 			path = HackerNewsiOSTests;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27671C771BD42FC700D4EEAF /* HackerNewsiOSTests.m in Sources */,
+				FDAF8C2F1BFFB00C0067F5C7 /* MainViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
