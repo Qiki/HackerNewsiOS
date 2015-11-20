@@ -12,12 +12,6 @@
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
-
-@end
-
-@interface ViewController (Test)
-
 - (NSString *)convertReadableTime:(NSTimeInterval)timeInterval;
 
 @end
-
