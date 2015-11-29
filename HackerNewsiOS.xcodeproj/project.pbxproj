@@ -531,10 +531,12 @@
 			baseConfigurationReference = B3DE56C7DC4374199E505657 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = HackerNewsiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kiki.HackerNewsiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "12e87ebf-e7d9-4053-9236-92e454344c0f";
 			};
 			name = Debug;
 		};
@@ -543,10 +545,12 @@
 			baseConfigurationReference = 9F95846CDFD57FDA7205AC33 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = HackerNewsiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kiki.HackerNewsiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "12e87ebf-e7d9-4053-9236-92e454344c0f";
 			};
 			name = Release;
 		};
